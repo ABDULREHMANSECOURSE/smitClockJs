@@ -2,9 +2,9 @@ body {
   margin: 0;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background:linear-gradient(135deg,#0f172a,#1e293b); */
   background: #833AB4;
   background: linear-gradient(50deg, rgba(131, 58, 180, 1) 0%, rgba(184, 110, 45, 1) 22%, rgba(253, 29, 29, 1) 50%, rgba(253, 48, 219, 1) 73%, rgba(252, 176, 69, 1) 100%);
   font-family: Arial, sans-serif;
@@ -16,18 +16,17 @@ body {
   text-align: center;
   padding: 30px 40px;
   border-radius: 16px;
-  width: 80%;
-  height: 30%;
+  width: 70%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.336);
 }
 
 #time {
-  font-size: 110px;
+  font-size: 8vw;
   font-weight: bold;
 }
 
 #date {
-  font-size: 50px;
+  font-size: 4vw;
   margin-top: 8px;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -40,11 +39,20 @@ button {
   border-radius: 8px;
   background: #00000000;
   color: white;
-  font-size: 44px;
+  font-size: 3vw;
   cursor: pointer;
 }
 
 button:hover {
   scale: 1.1;
   transition-duration: 0.5s;
+}
+
+img:hover {
+  scale: 1.4;
+  transition-duration: 0.7s;
+}
+
+img {
+  width: 14vw;
 }
