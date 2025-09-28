@@ -14,12 +14,20 @@ function updateClock() {
         hours = 12;
     }
 
-    // 2-digit format
-    hours = String(hours).padStart(2,"0");
-    minutes = String(minutes).padStart(2,"0");
-    seconds = String(seconds).padStart(2,"0");
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
 
     document.getElementById('time').textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+
+
+    var day = now.getDate()
+    var month = now.getMonth()
+    var year = now.getFullYear()
+
+    var date = document.getElementById('date')
+
+    date.textContent = `${day} / ${month} / ${year}`
 }
 
 setInterval(updateClock, 1000);
