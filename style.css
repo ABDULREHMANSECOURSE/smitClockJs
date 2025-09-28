@@ -1,37 +1,50 @@
-body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(135deg,#0f172a,#1e293b);
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background:linear-gradient(135deg,#0f172a,#1e293b); */
+  background: #833AB4;
+  background: linear-gradient(50deg, rgba(131, 58, 180, 1) 0%, rgba(184, 110, 45, 1) 22%, rgba(253, 29, 29, 1) 50%, rgba(253, 48, 219, 1) 73%, rgba(252, 176, 69, 1) 100%);
   font-family: Arial, sans-serif;
-  color:white;
+  color: white;
 }
-.clock{
-  text-align:center;
-  background:rgba(255,255,255,0.05);
-  padding:30px 40px;
-  border-radius:16px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.4);
+
+.clock {
+  background: rgba(156, 111, 27, 0);
+  text-align: center;
+  padding: 30px 40px;
+  border-radius: 16px;
+  width: 80%;
+  height: 30%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.336);
 }
-#time{
-  font-size:64px;
-  font-weight:bold;
+
+#time {
+  font-size: 110px;
+  font-weight: bold;
 }
-#date{
-  font-size:20px;
-  margin-top:8px;
-  color:rgba(255,255,255,0.7);
+
+#date {
+  font-size: 50px;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.7);
 }
-button{
-  margin-top:16px;
-  padding:8px 14px;
-  border:none;
-  border-radius:8px;
-  background:#3b82f6;
-  color:white;
-  font-size:14px;
-  cursor:pointer;
+
+button {
+  margin-top: 16px;
+  padding: 8px 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.336);
+  border: none;
+  border-radius: 8px;
+  background: #00000000;
+  color: white;
+  font-size: 44px;
+  cursor: pointer;
 }
-button:hover{background:#2563eb;}
+
+button:hover {
+  scale: 1.1;
+  transition-duration: 0.5s;
+}

@@ -1,3 +1,18 @@
+var use24 = false;
+
+var toggle = document.getElementById('toggle')
+
+toggle.onclick = timeformate
+function timeformate() {
+    if (use24 == false) {
+        toggle.textContent = "Toggle 12"
+        use24 = true
+    } else {
+        use24 = false
+        toggle.textContent = "Toggle 24"
+    }
+}
+
 function updateClock() {
     var now = new Date();
 
@@ -6,12 +21,16 @@ function updateClock() {
     var seconds = now.getSeconds();
 
     var ampm = "AM";
-    if (hours >= 12) {
-        hours = hours - 12;
-        ampm = "PM";
-    }
-    if (hours == 0) {
-        hours = 12;
+    if (!use24) {
+        if (hours >= 12) {
+            hours = hours - 12;
+            ampm = "PM";
+        }
+        if (hours == 0) {
+            hours = 12;
+        }
+    } else {
+        ampm = ""
     }
 
     hours = hours < 10 ? "0" + hours : hours;
@@ -27,8 +46,9 @@ function updateClock() {
 
     var date = document.getElementById('date')
 
-    date.textContent = `${day} / ${month} / ${year}`
+    date.textContent = `${day} | ${month} | ${year}`
+
 }
 
-setInterval(updateClock, 1000);
+setInterval(updateClock, 100);
 updateClock();
